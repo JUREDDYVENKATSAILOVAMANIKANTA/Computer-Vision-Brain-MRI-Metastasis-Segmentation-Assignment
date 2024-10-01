@@ -1,0 +1,20 @@
+import matplotlib.pyplot as plt
+
+def display_sample_images(df, index):
+    image_path = df.image_path[index]
+    mask_path = df.mask_path[index]
+    
+    image = io.imread(image_path)
+    mask = io.imread(mask_path)
+    
+    plt.figure(figsize=(12, 6))
+    plt.subplot(1, 2, 1)
+    plt.title('MRI Image')
+    plt.imshow(image, cmap='gray')
+    
+    plt.subplot(1, 2, 2)
+    plt.title('Mask')
+    plt.imshow(mask, cmap='gray')
+    plt.show()
+
+display_sample_images(brain_df, 0)
