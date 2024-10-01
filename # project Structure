@@ -1,0 +1,16 @@
+brain_mri_segmentation/
+│
+├── data/
+│   ├── train/
+│   └── test/
+│
+├── models/
+│   ├── nested_unet.py
+│   └── attention_unet.py
+│
+├── preprocessing/
+│   ├── preprocessing.py
+│
+├── main.py
+├── requirements.txt
+└── README.md
