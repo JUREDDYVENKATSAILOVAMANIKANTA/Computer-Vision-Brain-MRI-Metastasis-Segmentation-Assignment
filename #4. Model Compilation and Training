@@ -1,0 +1,6 @@
+from tensorflow.keras.optimizers import Adam
+
+model.compile(optimizer=Adam(), loss='binary_crossentropy', metrics=['accuracy'])
+
+
+history = model.fit(train_data, validation_data=val_data, epochs=50, callbacks=[...])
