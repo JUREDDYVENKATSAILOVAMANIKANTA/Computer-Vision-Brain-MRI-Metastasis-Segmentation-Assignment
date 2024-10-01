@@ -1,0 +1,6 @@
+import numpy as np
+from sklearn.metrics import jaccard_score
+
+# Assuming y_true and y_pred are available from your validation set
+dice_score = 2 * np.sum(y_true * y_pred) / (np.sum(y_true) + np.sum(y_pred))
+print(f'DICE Score: {dice_score}')
