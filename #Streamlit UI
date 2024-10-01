@@ -1,0 +1,9 @@
+import streamlit as st
+import requests
+
+st.title("Brain MRI Metastasis Segmentation")
+uploaded_file = st.file_uploader("Choose an MRI image...", type="jpg")
+
+if uploaded_file is not None:
+    response = requests.post("http://localhost:8000/predict/", files={"‪C:\Users\srini\Downloads\Data: uploaded_file})
+    st.image(response.json()["result"])
