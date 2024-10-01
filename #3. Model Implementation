@@ -1,0 +1,9 @@
+from tensorflow.keras.applications import VGG16
+from tensorflow.keras.layers import Input
+
+def vgg16_model(input_shape):
+    base_model = VGG16(weights='imagenet', include_top=False, input_shape=input_shape)
+    # Custom model layers can be added here
+    return base_model
+
+model = vgg16_model((256, 256, 3))
